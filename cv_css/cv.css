@@ -1,0 +1,269 @@
+@font-face {font-family: 'PT Sans Narrow';
+    src: url('/cv_fonts/PTN57F_W.eot');
+    src: local('PT Sans Narrow'), url('/cv_fonts/PTN57F_W.eot?#iefix') format('embedded-opentype'), url('/cv_fonts/PTN57F_W.woff') format('woff'),url('/cv_fonts/PTN57F_W.ttf') format('truetype'), url('/cv_fonts/PTN57F_W.svg#PTSans-Narrow') format('svg');}
+
+@font-face {font-family: 'PT Sans Narrow';
+    font-weight: bold;
+    src: url('/cv_fonts/PTN77F_W.eot');
+    src: local('PT Sans Narrow Bold'), url('/cv_fonts/PTN77F_W.eot?#iefix') format('embedded-opentype'), url('/cv_fonts/PTN77F_W.woff') format('woff'),url('/cv_fonts/PTN77F_W.ttf') format('truetype'), url('/cv_fonts/PTN77F_W.svg#PTSans-NarrowBold') format('svg');}
+
+body{
+    font-family: 'PT Sans Narrow', sans-serif;
+    background: url("/cv_img/bg.png");
+    color: #ccc;
+}
+
+.noscroll {
+    overflow: hidden;
+}
+
+.avatar{
+    position: relative;
+    top: 33px;
+    width: 158px;
+    height: 458px;
+    background-image: url("/cv_img/avatar.png");
+
+}
+
+.top_bg{
+    position: absolute;
+    width: 100%;
+    height: 535px;
+    top: 0;
+    z-index: -1;
+    background: url("/cv_img/top_bg.png") repeat-x;
+}
+
+.main{
+    width: 100%;
+    height: 335px;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.main h1{
+    font-size: 58px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 40px;
+    color: #dee9e9;
+}
+
+.main .prof{
+    color: #dee9e9;
+    font-size: 28px;
+}
+.main .prof strong{
+    font-weight: bold;
+}
+
+.main a{
+    font-size: 22px;
+    color: #dee9e9;
+    text-decoration: none;
+}
+
+.main a:hover{
+    text-decoration: underline;
+}
+.main_works{
+    text-align: center;
+    margin: auto 40px ;
+    margin-bottom: 100px;
+}
+
+.main_works figure{
+    display: inline-block;
+    margin: auto 40px;
+    cursor: pointer;
+}
+
+.main_works figure .thumb{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.main_works figure .label{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+
+.grid-wrap {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1090px;
+    width: 100%;
+    padding: 0;
+    perspective: 1500px;
+    perspective-origin: 50% 50%;
+    -webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
+    transition: all 0.5s cubic-bezier(0,0,0.25,1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.grid {
+    position: relative;
+    perspective: 1500px;
+    perspective-origin: 50% 50%;
+    -webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
+    transition: all 0.5s cubic-bezier(0,0,0.25,1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.grid figure,
+.grid .placeholder {
+    width: 200px;
+    height: 100px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.392);
+}
+
+.grid figure {
+    margin: 20px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: transform 0.5s;
+}
+
+.grid figure:hover {
+    /*transform: translateZ(50px) rotate3d(1, 0, 0, 10deg);*/
+}
+
+.anim_01{
+    transform: translateZ(200px) rotate3d(0, 1, 0, 90deg);
+}
+.anim_02{
+    transform: translateZ(-300px);
+}
+
+.social{
+    background: #161615;
+    height: 60px;
+    width: 100%;
+}
+
+.social ul{
+    width: 410px;
+    margin: auto;
+}
+
+.social li{
+    display: inline-block;
+    padding: 20px 20px 20px 0px;
+}
+
+.social li:last-child{
+    padding-right: 0;
+}
+.social li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.social li a:hover{
+    text-decoration: underline;
+}
+
+.big_preview{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow-y: scroll;
+    /*height: 0; *//* What seems to be the problem, officer? Well, we have a second scroll bar in Chrome! */
+    /*visibility: hidden;*/
+    z-index: 400;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(0,0,0,8);
+    transition: all 0.5s ease-out;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.big_preview h2{
+    text-align: center;
+    padding: 40px;
+    font-size: 32px;
+}
+
+.big_preview .close_btn:hover{
+    opacity: 1;
+}
+
+.big_preview .close_btn{
+    opacity: .5;
+    position: absolute;
+    cursor: pointer;
+    right: 20px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    background: url('/cv_img/close_icon.svg') no-repeat;
+}
+
+.big_preview .pic{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%
+}
+
+.big_preview .next, .big_preview .prev{
+    cursor: pointer;
+    position: fixed;
+    top: 200px;
+    width: 50px;
+    height: 150px;
+    background: rgba(255,255,255,0.5);
+}
+
+.big_preview .next{
+    right: 20px;
+}
+
+.big_preview .prev{
+    left: 20px;
+}
+
+.show{
+    opacity: 1;
+    height: auto;
+    pointer-events: auto;
+}
+
+.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media screen and (device-width: 360px) and (-webkit-device-pixel-ratio: 3) {
+
+}
+
+@media screen and (min-width: 400px) {
+
+}
+
+@media screen and (min-width: 600px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+
+}
